@@ -1,0 +1,33 @@
+@tailwind base;
+
+@layer base {
+  h2 {
+    @apply mb-11;
+    @apply text-3xl;
+    @apply font-extrabold;
+  }
+
+  h3 {
+    @apply mt-11;
+    @apply mb-6;
+    @apply text-2xl;
+    @apply font-bold;
+  }
+
+  p {
+    @apply mb-5;
+    @apply text-justify;
+  }
+
+  a {
+    @apply text-primary-500;
+  }
+
+  a:hover {
+    @apply text-primary-600;
+  }
+}
+
+@tailwind components;
+
+@tailwind utilities;

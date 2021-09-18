@@ -1,0 +1,27 @@
+{
+    "name": "wirgen-dev-theme",
+    "version": "1.0.0",
+    "description": "WirGen DevZone theme",
+    "license": "MIT",
+    "scripts": {
+        "development": "NODE_ENV=development tailwindcss -i ./src/tailwind.css -o ./dist/style.css",
+        "watch": "NODE_ENV=development tailwindcss -i ./src/tailwind.css -o ./dist/style.css --watch",
+        "start": "NODE_ENV=development concurrently \"tailwindcss -i ./src/tailwind.css -o ./dist/style.css --watch\" \"live-server ./ --open=html\"",
+        "build": "NODE_ENV=production tailwindcss -i ./src/tailwind.css -o ./dist/style.css --minify"
+    },
+    "author": {
+        "email": "wirgen@wirgen.cloud",
+        "name": "Denis Nikiforov",
+        "url": "https://wirgen.by"
+    },
+    "dependencies": {
+        "@tailwindcss/typography": "^0.4.1",
+        "autoprefixer": "^10.3.4",
+        "postcss": "^8.3.6",
+        "tailwindcss": "^2.2.15"
+    },
+    "devDependencies": {
+        "concurrently": "^6.2.1",
+        "live-server": "^1.2.1"
+    }
+}
