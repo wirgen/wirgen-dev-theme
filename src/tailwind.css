@@ -14,21 +14,100 @@
     @apply font-bold;
   }
 
+  h4 {
+    @apply mt-6;
+    @apply mb-3;
+    @apply text-xl;
+    @apply font-bold;
+  }
+
+  h5 {
+    @apply my-3;
+    @apply text-lg;
+    @apply font-bold;
+  }
+
+  h6 {
+    @apply my-3;
+    @apply text-lg;
+    @apply font-medium;
+  }
+
+  hr {
+    @apply my-3;
+  }
+
+  table {
+    @apply my-5;
+    @apply border-2;
+  }
+
+  td, th {
+    @apply px-2;
+    @apply py-1;
+    @apply border;
+  }
+
   p {
-    @apply mb-5;
+    @apply my-5;
     @apply text-justify;
+  }
+
+  pre[class*="language-"] {
+    @apply rounded-lg;
+  }
+
+  pre[class*="language-"], code[class*="language-"] {
+    @apply leading-6;
+  }
+
+  blockquote {
+    @apply my-5;
+    @apply py-1;
+    @apply pl-3;
+    @apply bg-gray-50;
+    @apply border-l-8;
+    @apply border-primary-200;
+  }
+
+  blockquote > p {
+    @apply my-1;
+    @apply leading-6;
+  }
+
+  .main ol, .main ul {
+    @apply list-decimal;
+    @apply pl-8;
+  }
+
+  .main li > ol, .main li > ul {
+    @apply pl-4;
   }
 
   a {
     @apply text-primary-500;
+    @apply font-medium;
   }
 
   a:hover {
     @apply text-primary-600;
   }
 
+  a.direct-link {
+    @apply text-gray-300;
+    @apply font-serif;
+  }
+
   strong {
     @apply font-bold;
+  }
+
+  mark {
+    @apply bg-primary-100;
+  }
+
+  p > img {
+    max-width: 100%;
   }
 }
 
