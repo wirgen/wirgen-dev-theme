@@ -53,6 +53,10 @@
     @apply text-justify;
   }
 
+  p:first-child {
+    @apply mt-0;
+  }
+
   pre[class*="language-"] {
     @apply rounded-lg;
   }
