@@ -7,9 +7,11 @@
   <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="/dist/style.css" rel="stylesheet">
+  <link href="/html/favicon.svg" rel="icon" type="image/svg">
 </head>
-<body class="font-sans antialiased font-normal leading-8 text-gray-700 bg-white">
-<div class="max-w-5xl mx-auto flex flex-col justify-between h-screen">
+<body class="font-sans antialiased font-normal leading-6 md:leading-7 lg:leading-8 text-gray-700 bg-white">
+<div
+    class="sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto px-6 sm:px-0 flex flex-col justify-between h-screen">
   <header class="py-7 flex justify-between items-center">
     <div class="flex">
       <svg class="mr-3 w-8 h-8 text-primary-500 fill-current" role="img" viewBox="0 0 512 512"
@@ -19,7 +21,7 @@
       </svg>
       <a class="text-2xl font-bold text-gray-700" href="/html/">WirGen DevZone</a>
     </div>
-    <nav class="text-lg font-medium">
+    <nav class="hidden sm:block text-lg font-medium">
       <ul class="flex">
         <li>
           <a class="px-4 text-gray-700" href="/html/tags.html">Теги</a>
@@ -32,15 +34,50 @@
         </li>
       </ul>
     </nav>
+    <div class="sm:hidden">
+      <button class="w-8 h-8 ml-1 mr-1 rounded" id="openMenu" type="button">
+        <svg class="text-gray-900 dark:text-gray-100" fill="currentColor" viewBox="0 0 20 20"
+             xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                fill-rule="evenodd"></path>
+        </svg>
+      </button>
+      <button class="w-8 h-8 ml-1 mr-1 rounded hidden" id="closeMenu" type="button">
+        <svg class="text-gray-900 dark:text-gray-100" fill="currentColor" viewBox="0 0 20 20"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+              clipRule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              fillRule="evenodd"
+          />
+        </svg>
+      </button>
+      <div
+          class="fixed w-full h-full top-24 right-0 bg-gray-200 dark:bg-gray-800 opacity-95 z-10 transform ease-in-out duration-300 translate-x-full"
+          id="mobileMenu">
+        <ul class="fixed h-full mt-8">
+          <li class="px-12 py-4">
+            <a class="text-2xl font-bold text-gray-700" href="/html/tags.html">Теги</a>
+          </li>
+          <li class="px-12 py-4">
+            <a class="text-2xl font-bold text-gray-700" href="/html/blog.html">Блог</a>
+          </li>
+          <li class="px-12 py-4">
+            <a class="text-2xl font-bold text-gray-700" href="https://wirgen.by" target="_blank">О себе</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
-  <main class="mb-auto py-12">
+  <main class="mb-auto py-8 lg:py-12">
     <article>
       <div class="font-medium text-gray-400 text-center">1 января 2021 г.</div>
-      <h1 class="pb-8 text-4xl font-extrabold leading-normal text-center border-b">
+      <h1 class="pb-8 text-2xl md:text-3xl lg:text-4xl font-extrabold leading-normal text-center border-b">
         Стремящийся предел функции: подынтегральное выражение или интеграл от функции, имеющий конечный разрыв?
       </h1>
-      <div class="pt-11 flex">
-        <div class="order-2 w-3/4 divide-y">
+      <div class="pt-6 lg:pt-11 flex flex-col lg:flex-row">
+        <div class="order-2 lg:w-3/4 divide-y">
           <div class="main pb-6">
             <h2 id="zagolovok-h2" tabindex="-1">Заголовок H2 <a aria-hidden="true" class="direct-link"
                                                                 href="#zagolovok-h2">#</a></h2>
@@ -164,10 +201,10 @@
             </a>
           </div>
         </div>
-        <div class="pr-8 w-1/4 divide-y">
+        <div class="lg:pr-8 lg:w-1/4 mb-8 lg:mb-0 divide-y border-b lg:border-b-0">
           <div class="pb-8">
             <h3 class="my-0 text-sm font-medium text-gray-500 uppercase">Теги</h3>
-            <ul class="flex flex-wrap items-center text-sm font-medium leading-8">
+            <ul class="flex flex-wrap items-center text-sm font-medium leading-6 md:leading-7 lg:leading-8">
               <li class="block mr-3">
                 <a class="px-1.5 py-1 bg-primary-50 uppercase" href="/html/tag.html">Tag 1</a>
               </li>
@@ -179,7 +216,7 @@
               </li>
             </ul>
           </div>
-          <div class="py-8 space-y-8">
+          <div class="hidden md:block py-8 space-y-8">
             <div>
               <h3 class="my-0 text-sm font-medium text-gray-500 uppercase">Предыдущий пост</h3>
               <a class="text-sm font-medium" href="/html/post.html">Косвенный скачок функции - актуальная национальная
@@ -196,7 +233,7 @@
     </article>
   </main>
   <footer>
-    <div class="mt-16 mb-8 text-sm font-medium">
+    <div class="mt-12 lg:mt-16 mb-8 text-sm font-medium">
       <div class="flex mb-3 space-x-4 justify-center">
         <a class="text-gray-700" href="https://github.com/wirgen" rel="nofollow" target="_blank">
           <span class="sr-only">github</span>
@@ -236,5 +273,24 @@
     </div>
   </footer>
 </div>
+<script type="text/javascript">
+  const openMenu = document.getElementById('openMenu')
+  const closeMenu = document.getElementById('closeMenu')
+  const mobileMenu = document.getElementById('mobileMenu')
+
+  openMenu.addEventListener('click', () => {
+    document.body.style.overflow = 'hidden'
+    mobileMenu.classList.remove('translate-x-full')
+    openMenu.classList.add('hidden')
+    closeMenu.classList.remove('hidden')
+  })
+
+  closeMenu.addEventListener('click', () => {
+    document.body.style.overflow = 'auto'
+    mobileMenu.classList.add('translate-x-full')
+    openMenu.classList.remove('hidden')
+    closeMenu.classList.add('hidden')
+  })
+</script>
 </body>
 </html>
