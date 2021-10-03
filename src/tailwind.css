@@ -1,6 +1,19 @@
 @tailwind base;
 
 @layer base {
+  .toc li > ol {
+    @apply pl-3;
+  }
+
+  .toc li {
+    @apply my-3;
+  }
+
+  .toc li li {
+    @apply my-2;
+    @apply text-sm;
+  }
+
   h2 {
     @apply mb-8;
     @apply md:mb-11;
