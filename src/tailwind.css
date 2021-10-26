@@ -165,12 +165,12 @@
   }
 
   a {
-    @apply text-primary-500;
+    @apply text-primary-700;
     @apply font-medium;
   }
 
   a:hover {
-    @apply text-primary-600;
+    @apply text-primary-500;
   }
 
   a.direct-link {
