@@ -125,6 +125,12 @@
     @apply mt-0;
   }
 
+  code:not([class]) {
+    @apply px-1.5;
+    @apply bg-gray-200;
+    @apply rounded;
+  }
+
   pre[class*="language-"] {
     @apply rounded-lg;
   }
