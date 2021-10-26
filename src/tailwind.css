@@ -1,16 +1,20 @@
 @tailwind base;
 
 @layer base {
+  .toc {
+    @apply leading-5;
+  }
+
   .toc li > ol {
     @apply pl-3;
   }
 
   .toc li {
-    @apply my-3;
+    @apply my-6;
   }
 
   .toc li li {
-    @apply my-2;
+    @apply my-3;
     @apply text-sm;
   }
 
